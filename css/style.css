@@ -12,6 +12,14 @@
 /* Font Family */
 @font-face {
   font-family: "inter";
+  src: url("../font/inter-extrabold-webfont.woff2") format("woff2"),
+    url("../font/inter-extrabold-webfont.woff") format("woff");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "inter";
   src: url("../font/inter-bold-webfont.woff2") format("woff2"),
     url("../font/inter-bold-webfont.woff") format("woff");
   font-weight: bold;
@@ -20,9 +28,9 @@
 
 @font-face {
   font-family: "inter";
-  src: url("../font/inter-extrabold-webfont.woff2") format("woff2"),
-    url("../font/inter-extrabold-webfont.woff") format("woff");
-  font-weight: bolder;
+  src: url("../font/inter-semibold-webfont.woff2") format("woff2"),
+    url("../font/inter-semibold-webfont.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -43,6 +51,7 @@ body {
   color: var(--color-body);
   font-size: 2.4rem;
   line-height: 1.5;
+  padding: 1rem;
 }
 
 h1,
@@ -109,5 +118,38 @@ a {
 @media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.badge--secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
   }
 }
