@@ -10,12 +10,11 @@
 }
 
 /* Font Family */
-
 @font-face {
   font-family: "inter";
   src: url("../font/inter-bold-webfont.woff2") format("woff2"),
     url("../font/inter-bold-webfont.woff") format("woff");
-  font-weight: 700;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -23,7 +22,7 @@
   font-family: "inter";
   src: url("../font/inter-extrabold-webfont.woff2") format("woff2"),
     url("../font/inter-extrabold-webfont.woff") format("woff");
-  font-weight: 800;
+  font-weight: bolder;
   font-style: normal;
 }
 
@@ -31,7 +30,7 @@
   font-family: "inter";
   src: url("../font/inter-regular-webfont.woff2") format("woff2"),
     url("../font/inter-regular-webfont.woff") format("woff");
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -84,5 +83,31 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow > :first-child {
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover > :first-child {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
