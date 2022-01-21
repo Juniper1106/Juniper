@@ -13,18 +13,44 @@
     ></script>
   </head>
   <body>
-    <nav class="nav collapsible">
-      <a href="/"><img class="nav__logo" src="icon/logo.png" alt="" /></a>
-      <svg class="icon icon--white nav__toggler">
-        <use xlink:href="icon/sprite.svg#menu"></use>
-      </svg>
-      <ul class="list nav__list collapsible__content">
-        <li class="nav__item"><a href="#">Hosting</a></li>
-        <li class="nav__item"><a href="#">VPS</a></li>
-        <li class="nav__item"><a href="#">Domain</a></li>
-        <li class="nav__item"><a href="#">Pricing</a></li>
-      </ul>
-    </nav>
+    <section class="block container">
+      <header class="block__header">
+        <h2 class="block__heading">Heading</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio,
+          maiores?
+        </p>
+      </header>
+      <div style="width: 30%; padding: 4rem">
+        <div class="card card--secondary">
+          <header class="card__header">Card Title</header>
+          <div class="card__body">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            aspernatur.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block block--dark block--skewed-left">
+      <div class="container">
+        <h2 class="block__heading">Heading</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio,
+          maiores?
+        </p>
+      </div>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>
+
+<!-- <section class="block block--dark block--skewed-left">
+    <div class="container grid grid--cols-2">
+      <div class="hero__content">
+        <h1>Cloud Hosting for Pros</h1>
+        <p>Deploy your websites in less than 60 seconds</p>
+        <a href="#" class="btn btn--accent btn--stretched">Get Started</a>
+      </div>
+      <img src="img/banner.png" alt="" />
+    </div>
+  </section> -->
