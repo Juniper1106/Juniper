@@ -58,6 +58,11 @@
   font-style: normal;
 }
 
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -87,13 +92,14 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
   margin-top: 0;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: 1.8rem;
   }
@@ -131,7 +137,7 @@ a {
   margin-left: 5px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .link-arrow {
     font-size: 1.5rem;
   }
@@ -175,7 +181,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -186,6 +191,7 @@ a {
 .list--tick {
   list-style-image: url(../icon/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -241,7 +247,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -305,6 +311,7 @@ a {
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 2rem 3rem;
   }
 }
 
@@ -332,6 +339,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -427,7 +435,7 @@ a {
 }
 
 .plan--popular:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 1024px) {
@@ -453,6 +461,7 @@ a {
 /* Media */
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .media__title {
@@ -653,7 +662,9 @@ a {
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
   color: white;
 }
 
@@ -766,6 +777,7 @@ nav .collapsible__content {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
@@ -779,6 +791,12 @@ nav .collapsible__content {
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -808,11 +826,33 @@ nav .collapsible__content {
 
 .feature__img {
   width: 100%;
+  /* TODO: */
+  align-items: center;
+  justify-items: center;
 }
 
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+
+/* Showcase */
+.block-showcase__img > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .block-showcase__img {
+    justify-self: end;
+  }
+
+  .block-showcase__img > img {
+    width: auto;
+    max-width: 700;
   }
 }
 
